@@ -36,7 +36,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: 进入前端项目frontend
-      run: cd frontend
+      run: cd frontend && ls
 
     - name: 打印前端
       run: ls
