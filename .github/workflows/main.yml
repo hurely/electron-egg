@@ -39,7 +39,7 @@ jobs:
       run: cd frontend &&  npm i  
       
     - name: Build FrontEnd
-      run: npm build   
+      run: npm run build   
 
     - name: cd src
       run: cd ..
