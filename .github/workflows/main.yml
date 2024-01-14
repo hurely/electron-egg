@@ -36,7 +36,16 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: cd FrontEnd && install Dependencies
-      run: cd frontend &&  npm i  
+      run: cd frontend
+
+    - name: cd FrontEnd && install Dependencies
+      run: ls
+
+    - name: install frontEnd Dependencies
+      run: npm i    
+
+    - name: cd FrontEnd && install Dependencies
+      run: cd frontend &&  npm i    
       
     - name: Build FrontEnd
       run: npm run build   
