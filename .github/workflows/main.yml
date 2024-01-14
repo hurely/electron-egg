@@ -58,6 +58,8 @@ jobs:
 
     - name: 打包windows
       run: npm run build-w
+      env:
+          GH_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
     # - name: 打包mac
     #   run: npm run build-m
@@ -65,5 +67,5 @@ jobs:
     - name: Code Coverage
       uses: codecov/codecov-action@v1
       with:
-        # token: ${{ secrets.CODECOV_TOKEN }}
-        GH_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        token: ${{ secrets.CODECOV_TOKEN }}
+        # GH_TOKEN: ${{ secrets.CODECOV_TOKEN }}
