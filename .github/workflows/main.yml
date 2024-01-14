@@ -63,9 +63,10 @@ jobs:
 
     # - name: 打包mac
     #   run: npm run build-m
-
-    - name: Code Coverage
-      uses: codecov/codecov-action@v1
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        # GH_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    
+    - name: Publish release
+    # if: ${{ startsWith(github.ref, 'refs/tags/v') }}
+      # 编辑 Releases 草稿并发布
+      run: gh release edit ${{ github.ref_name }} --draft=false
+      env:
+        GH_TOKEN: ${{ secrets.CODECOV_TOKEN }}    
