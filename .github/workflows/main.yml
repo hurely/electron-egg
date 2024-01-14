@@ -35,31 +35,28 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: cd FrontEnd && install Dependencies
+    - name: 进入前端项目frontend
       run: cd frontend
 
-    - name: cd FrontEnd && install Dependencies
+    - name: 打印前端
       run: ls
 
-    - name: install frontEnd Dependencies
-      run: npm i    
-
-    - name: cd FrontEnd && install Dependencies
-      run: cd frontend &&  npm i    
+    - name: 安装前端依赖
+      run: npm i
       
-    - name: Build FrontEnd
+    - name: 打包前端
       run: npm run build   
 
-    - name: cd src
+    - name: 返回主目录
       run: cd ..
 
-    - name: Install Dependencies
+    - name: 安装依赖
       run: npm i  
 
-    - name: run rd
+    - name: 复制前端dist
       run: npm run rd
 
-    - name: Continuous Integration
+    - name: 打包windows
       run: npm run build-w
 
     - name: Code Coverage
