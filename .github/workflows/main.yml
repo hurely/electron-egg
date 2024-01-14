@@ -39,16 +39,16 @@ jobs:
       run: cd frontend && ls
 
     - name: 打印前端
-      run: ls
+      run: cd frontend && ls
 
     - name: 安装前端依赖
-      run: npm i
+      run: cd frontend && npm i
       
     - name: 打包前端
-      run: npm run build   
+      run: cd frontend && npm run build   
 
-    - name: 返回主目录
-      run: cd ..
+    # - name: 返回主目录
+    #   run: cd ..
 
     - name: 安装依赖
       run: npm i  
