@@ -60,6 +60,12 @@ jobs:
       run: npm run build-w
       env:
           GH_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    
+    - uses: actions/upload-artifact@v2
+      name: upload build output
+        with:
+         name: 下载的压缩包名字
+         path: ${{ github.workspace }}/out
 
     # - name: 打包mac
     #   run: npm run build-m
