@@ -66,6 +66,7 @@ jobs:
       with:
         name: 下载的压缩包名字
         path: ${{ github.workspace }}/out
+        retention-days: 1
 
     # - name: 打包mac
     #   run: npm run build-m
