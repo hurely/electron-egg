@@ -63,9 +63,9 @@ jobs:
     
     - uses: actions/upload-artifact@v2
       name: upload build output
-        with:
-         name: 下载的压缩包名字
-         path: ${{ github.workspace }}/out
+      with:
+        name: 下载的压缩包名字
+        path: ${{ github.workspace }}/out
 
     # - name: 打包mac
     #   run: npm run build-m
